@@ -1,0 +1,26 @@
+<div class="titulo"><h2>Histórico de Sentimentos do Chat</h2></div>
+<div class="sentimento-historico">  
+  <div class="grupo positivo">
+    <h3>Positivo</h3>
+    <div *ngFor="let message of positiveMessages" class="mensagem-card">
+      <p>{{ message.mensagem }}</p>
+      <span class="positivo">{{ message.sentimento.text }} ({{ message.sentimento.score }})</span>
+    </div>
+  </div>
+  
+  <div class="grupo neutro">
+    <h3>Neutro</h3>
+    <div *ngFor="let message of neutralMessages" class="mensagem-card">
+      <p>{{ message.mensagem }}</p>
+      <span class="neutro">{{ message.sentimento.text }} ({{ message.sentimento.score }})</span>
+    </div>
+  </div>
+  
+  <div class="grupo negativo">
+    <h3>Negativo</h3>
+    <div *ngFor="let message of negativeMessages" class="mensagem-card">
+      <p>{{ message.mensagem }}</p>
+      <span class="negativo">{{ message.sentimento.text }} ({{ message.sentimento.score }})</span>
+    </div>
+  </div>
+</div>
